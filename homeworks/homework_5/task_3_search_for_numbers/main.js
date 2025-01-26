@@ -1,7 +1,7 @@
-let N = prompt("Введіть ціле число");
-if (N !== null && N.trim() !== "" && !isNaN(N) && Number.isInteger(Number(N))) {
+let n = prompt("Введіть ціле число");
+if (n !== null && n.trim() !== "" && !isNaN(n) && Number.isInteger(Number(n))) {
   for (let i = 1; i <= 100; i++) {
-    if (i ** 2 <= N) {
+    if (i ** 2 <= n) {
       console.log(i);
     }
   }
