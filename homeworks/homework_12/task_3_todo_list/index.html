@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Список завдань</title>
+  </head>
+  <body>
+    <input type="text" id="taskInput" placeholder="Введіть завдання" />
+    <button id="addTaskBtn">Додати</button>
+    <ul id="taskList"></ul>
+
+    <script>
+      document.getElementById("addTaskBtn").onclick = function () {
+        const taskText = document.getElementById("taskInput").value;
+        if (taskText) {
+          const li = document.createElement("li");
+          li.textContent = taskText;
+          const deleteBtn = document.createElement("button");
+          deleteBtn.textContent = "Видалити";
+          deleteBtn.onclick = function () {
+            li.remove();
+          };
+
+          li.appendChild(deleteBtn);
+          document.getElementById("taskList").appendChild(li);
+          document.getElementById("taskInput").value = "";
+        }
+      };
+    </script>
+  </body>
+</html>
