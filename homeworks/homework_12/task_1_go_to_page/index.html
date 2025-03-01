@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Приклад переадресації</title>
+  </head>
+  <body>
+    <button id="firstButton">Ввести посилання</button>
+    <button id="secondButton">Перейти за посиланням</button>
+
+    <script>
+      let userLink = "";
+      document.getElementById("firstButton").addEventListener("click", () => {
+        userLink = prompt("Будь ласка, введіть посилання:");
+      });
+      document.getElementById("secondButton").addEventListener("click", () => {
+        if (userLink) {
+          window.location.href = userLink;
+        } else {
+          alert("Будь ласка, спочатку введіть посилання.");
+        }
+      });
+    </script>
+  </body>
+</html>
