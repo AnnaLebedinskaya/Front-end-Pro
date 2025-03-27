@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список студентів</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <h1>Студенти</h1>
+    
+    <form id="student-form">
+        <input type="text" id="first-name" placeholder="Ім'я" required>
+        <input type="text" id="last-name" placeholder="Прізвище" required>
+        <input type="number" id="birth-year" placeholder="Рік народження" required>
+        <input type="text" id="grades" placeholder="Оцінки (через кому)" required>
+        <button type="submit">Додати студента</button>
+    </form>
+
+    <ul id="students-list"></ul>
+
+    <script src="main.js"></script>
+</body>
+</html>
