@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Обробка подій</title>
+  </head>
+  <body>
+    <div id="parentContainer">
+      <button class="childButton" id="button1">Кнопка 1</button>
+      <button class="childButton" id="button2">Кнопка 2</button>
+      <button class="childButton" id="button3">Кнопка 3</button>
+    </div>
+
+    <script>
+      document
+        .getElementById("parentContainer")
+        .addEventListener("click", function (event) {
+          if (event.target && event.target.classList.contains("childButton")) {
+            alert("Клікнуто на кнопці: " + event.target.textContent);
+          }
+        });
+    </script>
+  </body>
+</html>
