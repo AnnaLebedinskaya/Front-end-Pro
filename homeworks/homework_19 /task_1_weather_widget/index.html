@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Віджет погоди</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="widget">
+      <div id="date" class="small"></div>
+      <div id="time" class="time">--:--</div>
+      <div class="info">
+        <div id="weather-description">Завантаження...</div>
+        <img id="icon" class="icon" src="" alt="Погода">
+        <div class="temp"><span id="temp">--</span>°C</div>
+        <div id="feels-like">Відчувається як: --°C</div>
+      </div>
+      <div class="info">
+        Вологість: <span id="humidity">--</span>%<br>
+        Тиск: <span id="pressure">--</span> гПа<br>
+        Вітер: <span id="wind">--</span> км/год
+      </div>
+      <div class="small" id="updated">Оновлено: --:--</div>
+      <button onclick="getWeather()">🔄 Оновити</button>
+    </div>
+  
+    <script src="main.js"></script>
+  </body>
+</html>
